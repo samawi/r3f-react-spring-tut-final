@@ -53,10 +53,11 @@ export const Carousel = (props) => {
     <>
       <group rotation-y={-Math.PI / 4} position-y={-0.01}>
         <animated.group rotation-y={carouselRotation}>
-          <mesh position={[0, -2, 0]}>
+          <mesh position={[0, -0.5, 0]}>
             <meshStandardMaterial color={"white"} />
-            <cylinderBufferGeometry args={[12, 12, 4, 64]} />
+            <cylinderBufferGeometry args={[12, 12, 1, 64]} />
           </mesh>
+          {/* PARTITION */}
           <mesh scale={[1, 6, 24]} position-y={3}>
             <boxBufferGeometry />
             <meshStandardMaterial color={"white"} />
@@ -125,19 +126,7 @@ export const Carousel = (props) => {
             </Float>
           </>
           {/* BEACH */}
-          <>
-            <Palm scale={[3, 3, 3]} position={[-1, 0, 1]} />
-            <Palm
-              scale={[2.8, 2.6, 2.6]}
-              position={[-7, 0, 0]}
-              rotation-y={Math.PI / 6}
-            />
-            <VolleyBall />
-            <IceCream position={[-10, 4, 3]} scale={[3, 3, 3]} />
-            <IceCream position={[-8, 4, 8]} scale={[3, 3, 3]} />
-            <IceCream position={[-3, 4, 10]} scale={[3, 3, 3]} />
-          </>
-        </animated.group>
+÷        </animated.group>
       </group>
     </>
   );
